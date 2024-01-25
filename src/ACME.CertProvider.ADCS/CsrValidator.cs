@@ -18,6 +18,8 @@ namespace TGIT.ACME.Protocol.IssuanceServices.ADCS
         {
             _options = options;
             _logger = logger;
+
+            Windows.Win32.PInvoke.CertAdd
         }
 
         public Task<(bool isValid, AcmeError? error)> ValidateCsrAsync(Order order, string csr, CancellationToken cancellationToken)
